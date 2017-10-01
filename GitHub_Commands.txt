@@ -1,0 +1,30 @@
+Install Hub :
+
+# Install binary and documentation
+wget https://github.com/github/hub/releases/download/v2.2.5/hub-linux-amd64-2.2.5.tgz
+tar zvxvf hub-linux-amd64-2.2.5.tgz
+sudo ./hub-linux-amd64-2.2.5/install
+
+# Setup autocomplete for zsh:
+mkdir -p ~/.zsh/completions
+mv ./hub-linux-amd64-2.2.5/etc/hub.zsh_completion ~/.zsh/completions/_hub
+echo "fpath=(~/.zsh/completions $fpath)" >> ~/.zshrc
+echo "autoload -U compinit && compinit" >> ~/.zshrc
+
+# add alias
+echo "eval "$(hub alias -s)"" >> ~/.zshrc
+
+# Cleanup
+rm -rf hub-linux-amd64-2.2.5
+
+
+mkdir GitHub_Repo
+cd GitHub_Repo
+git init
+hub create
+create mkdir
+touch file_name.txt
+git add .
+git status
+git commit -m "Initial Commit"
+git push origin master
