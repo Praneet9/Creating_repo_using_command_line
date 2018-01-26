@@ -28,3 +28,9 @@ git add .
 git status
 git commit -m "Initial Commit"
 git push origin master
+
+git-fatal-unable-to-create-path-my-project-git-index-lock-file-exists
+rm -f ./.git/index.lock
+
+Pull out repo from the server
+git rm --cached /path/to/file
