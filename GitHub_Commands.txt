@@ -34,3 +34,6 @@ rm -f ./.git/index.lock
 
 Pull out repo from the server
 git rm --cached /path/to/file
+
+Finding the size of Current Git Push
+git bundle create foo.bundle ^origin/master master
