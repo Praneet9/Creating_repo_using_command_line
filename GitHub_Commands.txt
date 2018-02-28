@@ -37,3 +37,7 @@ git rm --cached /path/to/file
 
 Finding the size of Current Git Push
 git bundle create foo.bundle ^origin/master master
+
+Cloning only a subdirectory within a repo
+svn export https://github.com/PhantomX/slackbuilds/trunk/${directory}
+This is the simplest way. It does not download all the repo. Note that we must add the /trunk and remove /tree/master
